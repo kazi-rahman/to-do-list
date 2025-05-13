@@ -1,0 +1,98 @@
+<style>
+        /* Use Inter font */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6; /* Light gray background */
+        }
+        /* Style for draggable items */
+        .draggable {
+            cursor: grab;
+            user-select: none; /* Prevent text selection while dragging */
+            transition: background-color 0.2s ease;
+        }
+        .draggable:active {
+            cursor: grabbing;
+            background-color: #e5e7eb; /* Slightly darker background when grabbing */
+        }
+        /* Style for the drop zones */
+        .drop-zone {
+            min-height: 150px; /* Ensure drop zones have a minimum height */
+            border: 2px dashed #d1d5db; /* Dashed border for drop zones */
+            transition: background-color 0.2s ease, border-color 0.2s ease;
+            border-radius: 0.5rem; /* Rounded corners */
+            padding: 1rem; /* Padding inside drop zones */
+        }
+        /* Style for when an item is dragged over a drop zone */
+        .drag-over {
+            background-color: #d1fae5; /* Light green background */
+            border-color: #10b981; /* Green border */
+        }
+        /* Style for the task cards */
+        .task-card {
+            background-color: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.5rem;
+            padding: 0.75rem;
+            margin-bottom: 0.75rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        /* Style for the add task button */
+        .add-task-btn {
+            transition: background-color 0.2s ease, transform 0.1s ease;
+        }
+        .add-task-btn:hover {
+            background-color: #1e40af; /* Darker blue on hover */
+        }
+         .add-task-btn:active {
+            transform: scale(0.98); /* Slightly shrink on click */
+        }
+        /* Style for delete button */
+        .delete-btn {
+            font-size: 0.75rem;
+            padding: 0.1rem 0.3rem;
+            margin-left: 0.5rem;
+            color: #ef4444; /* Red color */
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            transition: color 0.2s ease;
+        }
+        .delete-btn:hover {
+            color: #b91c1c; /* Darker red on hover */
+        }
+        /* Confetti canvas positioning */
+        #confetti-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none; /* Allow clicks to pass through */
+            z-index: 9999; /* Ensure it's on top */
+        }
+
+
+
+        .floating-btn {
+            position: fixed;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            right: 20px;
+            bottom: 20px;
+            transition: transform 0.2s;
+        }
+        .floating-btn:hover {
+            transform: scale(1.1);
+        }
+    </style>
