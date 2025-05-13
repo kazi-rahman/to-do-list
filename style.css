@@ -1,4 +1,4 @@
-<style>
+
         /* Use Inter font */
         body {
             font-family: 'Inter', sans-serif;
@@ -95,4 +95,4 @@
         .floating-btn:hover {
             transform: scale(1.1);
         }
-    </style>
+ 
